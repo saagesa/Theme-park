@@ -8,7 +8,7 @@ import java.util.UUID;
 public class AuthService {
     private final Repository<String, User> userRepo;
 
-    public AuthService(Repository<String, User> userRepo) { this.userRepo = userRepo; }
+public AuthService(Repository<String, User> userRepo) { this.userRepo = userRepo; }
 
     // simple register: store password "hash" directly (demo)
     public User register(String name, String email, String password) {
@@ -18,13 +18,12 @@ public class AuthService {
         userRepo.save(u);
         return u;
     }
-
-    public Optional<User> login(String email, String password) {
+public Optional<User> login(String email, String password) {
         return userRepo.findAll().stream()
                 .filter(u -> u.getEmail().equalsIgnoreCase(email))
                 .filter(u -> u.getPasswordHash().equals(hash(password)))
                 .findFirst();
     }
 
-    private String hash(String s) { return Integer.toHexString(s.hashCode()); }
+private String hash(String s) { return Integer.toHexString(s.hashCode()); }
 }
