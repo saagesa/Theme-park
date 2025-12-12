@@ -1,9 +1,0 @@
--Dfile.encoding=UTF-8
--Dstdout.encoding=UTF-8
--Dstderr.encoding=UTF-8
--classpath
-"C:\\Users\\Admin\\eclipse-workspace\\themepark\\target\\classes;C:\\Users\\Admin\\.p2\\pool\\plugins\\junit-jupiter-api_5.11.0.jar;C:\\Users\\Admin\\.p2\\pool\\plugins\\junit-jupiter-engine_5.11.0.jar;C:\\Users\\Admin\\.p2\\pool\\plugins\\junit-jupiter-migrationsupport_5.11.0.jar;C:\\Users\\Admin\\.p2\\pool\\plugins\\junit-jupiter-params_5.11.0.jar;C:\\Users\\Admin\\.p2\\pool\\plugins\\junit-platform-commons_1.11.0.jar;C:\\Users\\Admin\\.p2\\pool\\plugins\\junit-platform-engine_1.11.0.jar;C:\\Users\\Admin\\.p2\\pool\\plugins\\junit-platform-launcher_1.11.0.jar;C:\\Users\\Admin\\.p2\\pool\\plugins\\junit-platform-runner_1.11.0.jar;C:\\Users\\Admin\\.p2\\pool\\plugins\\junit-platform-suite-api_1.11.0.jar;C:\\Users\\Admin\\.p2\\pool\\plugins\\junit-platform-suite-engine_1.11.0.jar;C:\\Users\\Admin\\.p2\\pool\\plugins\\junit-platform-suite-commons_1.11.0.jar;C:\\Users\\Admin\\.p2\\pool\\plugins\\junit-vintage-engine_5.11.0.jar;C:\\Users\\Admin\\.p2\\pool\\plugins\\org.opentest4j_1.3.0.jar;C:\\Users\\Admin\\.p2\\pool\\plugins\\org.apiguardian.api_1.1.2.jar;C:\\Users\\Admin\\.p2\\pool\\plugins\\org.junit_4.13.2.v20230809-1000.jar;C:\\Users\\Admin\\.p2\\pool\\plugins\\org.hamcrest_3.0.0.jar;C:\\Users\\Admin\\.p2\\pool\\plugins\\org.hamcrest.core_2.2.0.v20230809-1000.jar"
--XX:+ShowCodeDetailsInExceptionMessages
-themepark.Main
-8Kints.txt
-1
