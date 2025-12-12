@@ -1,0 +1,9 @@
+-Dfile.encoding=UTF-8
+-Dstdout.encoding=UTF-8
+-Dstderr.encoding=UTF-8
+-classpath
+"C:\\Users\\Admin\\eclipse-workspace\\themepark\\target\\classes"
+-XX:+ShowCodeDetailsInExceptionMessages
+themepark.Main
+8Kints.txt
+1
