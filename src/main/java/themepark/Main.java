@@ -5,9 +5,9 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        InMemoryRepository<String, User> userRepo = new InMemoryRepository<>(u -> u.getId());
-        InMemoryRepository<String, Ride> rideRepo = new InMemoryRepository<>(r -> r.getId());
-        InMemoryRepository<String, Ticket> ticketRepo = new InMemoryRepository<>(t -> t.getId());
+        UserRepository userRepo = UserRepository.getInstance();
+        RideRepository rideRepo = RideRepository.getInstance();
+        TicketRepository ticketRepo = TicketRepository.getInstance();
 
         AuthService auth = new AuthService(userRepo);
         ParkService park = new ParkService(rideRepo, ticketRepo, userRepo);
@@ -32,6 +32,7 @@ public class Main {
                     java.util.Optional<User> opt = auth.login(parts[1], parts[2]);
                     System.out.println(opt.isPresent() ? "OK" : "FAIL");
              
+                    
                 } else if(line.startsWith("buy")) {
                     String[] p = line.split(" ");
                     Ticket ticket = park.buyTicket(p[1], p[2]);
