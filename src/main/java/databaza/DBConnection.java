@@ -6,31 +6,21 @@ import java.sql.SQLException;
 
 public class DBConnection {
 
-
-
-
-
     private static final String URL = "jdbc:oracle:thin:@localhost:1521/xe";
-    private static final String USER = "system"; // vendos username
-    private static final String PASS = "Sagesa1967*"; // vendos password
+    private static final String USER = "system";
+    private static final String PASS = "Sagesa1967*";
+
+    private static Connection connection; // Singleton connection
 
     public static Connection getConnection() throws SQLException {
-        try {
-            Class.forName("oracle.jdbc.OracleDriver"); // regjistron driver-in
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        }
-        return DriverManager.getConnection(URL, USER, PASS);
-    }
-
-    // Testimi i lidhjes
-    public static void main(String[] args) {
-        try (Connection conn = getConnection()) {
-            if (conn != null) {
-                System.out.println("Lidhja me databazën u realizua me sukses!");
+        if (connection == null || connection.isClosed()) {
+            try {
+                Class.forName("oracle.jdbc.OracleDriver");
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
             }
-        } catch (SQLException e) {
-            e.printStackTrace();
+            connection = DriverManager.getConnection(URL, USER, PASS);
         }
+        return connection;
     }
 }
